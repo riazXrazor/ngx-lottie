@@ -6,7 +6,7 @@ import {
   ElementRef,
   ViewChild,
   Self,
-  PLATFORM_ID
+  PLATFORM_ID,
 } from '@angular/core';
 
 import { BaseDirective } from './base.directive';
@@ -25,7 +25,7 @@ import { LottieEventsFacade } from './events-facade';
     ></div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [LottieEventsFacade]
+  providers: [LottieEventsFacade],
 })
 export class LottieComponent extends BaseDirective implements OnInit {
   @ViewChild('container', { static: true }) container: ElementRef<HTMLElement> = null!;
@@ -33,7 +33,7 @@ export class LottieComponent extends BaseDirective implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) platformId: string,
     @Self() private eventsFacade: LottieEventsFacade,
-    animationLoader: AnimationLoader
+    animationLoader: AnimationLoader,
   ) {
     super(platformId, animationLoader);
   }
