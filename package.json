@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/ngx-lottie/ngx-lottie#readme",
   "scripts": {
-    "postinstall": "ngcc",
     "start-test": "start-server-and-test",
     "ng": "ng",
     "test": "ng test",
